@@ -19,3 +19,11 @@ Dica: Use inputs para receber os dados!
 Lembre de converter ele para o tipo necessário!
 Print na tela com "print"
 """
+
+primeira = float(input('Digite a primeira nota: '))
+segunda = float(input('Digite a segunda nota: '))
+terceira = float(input('Digite a terceira nota: '))
+
+media = float((primeira + segunda + terceira)/3)
+
+print(f'Média: {media:.2f}')
