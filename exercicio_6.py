@@ -52,3 +52,22 @@ Qual país você vai viajar? China
 Resposta:
 Não temos essa moeda em caixa.
 """
+
+pais = str(input('Qual país você vai viajar?: '))
+inclusos = (pais == 'Estados Unidos') or (pais == 'Argentina') or (pais == 'Japão')
+
+if not inclusos :
+    print('Não temos essa moeda em caixa.')
+
+else:
+    valor = float(input('Quantos reais você quer converter?: R$'))
+    usd = valor / 5
+    ars = valor * 180
+    jpy = valor * 30
+
+    if pais == 'Estados Unidos':
+        print(f'Resposta: {usd:.2f} USD')
+    elif pais == 'Argentina':
+        print(f'Resposta: {ars:.2f} ARS')
+    elif pais == 'Japão':
+        print(f'Resposta: {jpy:.2f} JPY')
