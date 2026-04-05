@@ -39,13 +39,12 @@ Sim
 """
 
 cromossomo = int(input('Informe o cromossomo da variante: chr'))
+posicao = int(input('Informe a posição da variante no cromossomo: '))
 
-if cromossomo != 17:
-    print('Não')
+if cromossomo == 17 and 41196312 <= posicao <= 41277500:
+    print('Sim')
 else:
-    posicao = int(input('Informe a posição da variante no cromossomo: '))
-
-    if 41196312 <= posicao <= 41277500:
+    print('Não')
         print('Sim')
     else:
         print('Não')
