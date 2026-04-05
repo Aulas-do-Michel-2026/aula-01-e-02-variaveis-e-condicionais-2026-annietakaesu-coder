@@ -88,3 +88,23 @@ Esse exercício está com uma resolução no notebook da aula.
 
 Tente, se não der, olhe lá!
 """
+
+reads = int(input('Quantidade de reads da variante: '))
+vaf = float(input('Frequência alélica da variante (%): '))
+if reads < 10 or  vaf < 20:
+    print('Não é relevante, pois deve ser um artefato.')
+else:
+    impacto = str(input('Posição de impacto (ALTO ou BAIXO): '))
+    if impacto == 'BAIXO':
+        print('Não é relevante.')
+    elif impacto == 'ALTO':
+        frequencia = float(input('Frequência da variante na população (%): '))
+        if frequencia < 5:
+            print('É relevante.')
+        else:
+            gene = str(input('Gene da variante: '))
+            excecao = (gene == 'HFE') or (gene == 'MEFV') or (gene == 'GJB2')
+            if not excecao:
+                print('Não é relevante.')
+            else:
+                print('É relevante.')
